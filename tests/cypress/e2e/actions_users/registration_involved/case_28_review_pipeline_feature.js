@@ -133,7 +133,7 @@ context('Review pipeline feature', () => {
             cy.saveJob();
 
             // Annotator updates job state, both times update is successful, logout
-            // check: https://github.com/cvat-ai/cvat/pull/7158
+            // check: https://github.com/VGTHuang/cvat/pull/7158
             cy.intercept('PATCH', `/api/jobs/${jobIDs[0]}`).as('updateJobState');
             cy.updateJobStateOnAnnotationView('completed');
             cy.wait('@updateJobState').its('response.statusCode').should('equal', 200);

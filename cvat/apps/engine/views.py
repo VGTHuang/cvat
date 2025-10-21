@@ -1012,7 +1012,7 @@ class TaskViewSet(viewsets.GenericViewSet, mixins.ListModelMixin,
         """
         Applies file ordering for the "predefined" file sorting method of the task creation.
 
-        Read more: https://github.com/cvat-ai/cvat/issues/5061
+        Read more: https://github.com/VGTHuang/cvat/issues/5061
         """
 
         expected_files = ordering
@@ -1440,7 +1440,7 @@ class TaskViewSet(viewsets.GenericViewSet, mixins.ListModelMixin,
             # FIXME: It seems that in some cases exc_info can be None.
             # It's not really clear how it is possible, but it can
             # lead to an error in serializing the response
-            # https://github.com/cvat-ai/cvat/issues/5215
+            # https://github.com/VGTHuang/cvat/issues/5215
             response = { "state": "Failed", "message": parse_exception_message(job.exc_info or "Unknown error") }
         else:
             rq_job_meta = ImportRQMeta.for_job(job)
@@ -1987,7 +1987,7 @@ class JobViewSet(viewsets.GenericViewSet, mixins.ListModelMixin, mixins.CreateMo
             media = [
                 # Insert placeholders if frames are skipped
                 # TODO: remove placeholders, UI supports chunks without placeholders already
-                # after https://github.com/cvat-ai/cvat/pull/8272
+                # after https://github.com/VGTHuang/cvat/pull/8272
                 f if f.frame in segment_frame_set else SimpleNamespace(
                     path=f'placeholder.jpg', width=f.width, height=f.height
                 )

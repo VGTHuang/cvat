@@ -704,7 +704,7 @@ class CommonData(InstanceLabelData):
         Historically, there were importers that were not converting points to ints/floats.
         The only place to make sure that all points in shapes have the right type was this one.
         However, this does eat up a lot of memory for some reason.
-        (see https://github.com/cvat-ai/cvat/pull/1898)
+        (see https://github.com/VGTHuang/cvat/pull/1898)
 
         So, before we can guarantee that all the importers are returning the right data,
         we have to have this conversion.

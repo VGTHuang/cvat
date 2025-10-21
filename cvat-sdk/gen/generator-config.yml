@@ -1,6 +1,6 @@
 additionalProperties:
   projectName: "cvat_sdk"
-  packageUrl: "https://github.com/cvat-ai/cvat"
+  packageUrl: "https://github.com/VGTHuang/cvat"
   packageName: "cvat_sdk.api_client"
   initRequiredVars: true
   generateSourceCodeOnly: false

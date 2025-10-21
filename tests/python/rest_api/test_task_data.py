@@ -203,7 +203,7 @@ class TestPostTaskData:
 
     def test_can_create_task_with_big_images(self):
         # Checks for regressions about the issue
-        # https://github.com/cvat-ai/cvat/issues/6878
+        # https://github.com/VGTHuang/cvat/issues/6878
         # In the case of big files (>2.5 MB by default),
         # uploaded files could be write-appended twice,
         # leading to bigger raw file sizes than expected.

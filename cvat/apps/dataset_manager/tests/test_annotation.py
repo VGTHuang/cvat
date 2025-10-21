@@ -705,7 +705,7 @@ class TestTaskAnnotation(TestCase):
         # so their ids correspond to this order. The DB, however,
         # can return them in an arbitrary order, if not specified explicitly.
         # This test tries to reproduce this by specifying job ids.
-        # https://github.com/cvat-ai/cvat/issues/9860
+        # https://github.com/VGTHuang/cvat/issues/9860
 
         models.Job.objects.create(
             segment=models.Segment.objects.create(task=db_task, start_frame=0, stop_frame=10),

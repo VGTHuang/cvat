@@ -6,7 +6,7 @@ info:
   termsOfService: https://www.google.com/policies/terms/
   contact:
     name: CVAT.ai team
-    url: https://github.com/cvat-ai/cvat
+    url: https://github.com/VGTHuang/cvat
     email: support@cvat.ai
   license:
     name: MIT License

@@ -708,7 +708,7 @@ class JobAnnotation:
 
     def _init_tracks_from_db(self):
         # NOTE: do not use .prefetch_related() with .values() since it's useless:
-        # https://github.com/cvat-ai/cvat/pull/7748#issuecomment-2063695007
+        # https://github.com/VGTHuang/cvat/pull/7748#issuecomment-2063695007
         db_tracks = (
             self.db_job.labeledtrack_set.values(
                 "id",

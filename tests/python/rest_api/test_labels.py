@@ -871,7 +871,7 @@ class TestLabelUpdates:
     def test_project_label_update_triggers_nested_task_and_job_update(
         self, update_kind, admin_user, labels, projects_wlc, tasks, jobs
     ):
-        # Checks for regressions against the issue https://github.com/cvat-ai/cvat/issues/6871
+        # Checks for regressions against the issue https://github.com/VGTHuang/cvat/issues/6871
 
         project = next(p for p in projects_wlc if p["tasks"]["count"] and p["labels"]["count"])
         project_labels = [l for l in labels if l.get("project_id") == project["id"]]
@@ -924,7 +924,7 @@ class TestLabelUpdates:
     def test_task_label_update_triggers_nested_task_and_job_update(
         self, update_kind, admin_user, labels, tasks_wlc, jobs
     ):
-        # Checks for regressions against the issue https://github.com/cvat-ai/cvat/issues/6871
+        # Checks for regressions against the issue https://github.com/VGTHuang/cvat/issues/6871
 
         task = next(
             t

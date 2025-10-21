@@ -488,7 +488,7 @@ def _restore_file_order_from_manifest(
     """
     Restores file ordering for the "predefined" file sorting method of the task creation.
     Checks for extra files in the input.
-    Read more: https://github.com/cvat-ai/cvat/issues/5061
+    Read more: https://github.com/VGTHuang/cvat/issues/5061
     """
 
     input_files = {os.path.relpath(p, upload_dir): p for p in extractor.absolute_source_paths}
@@ -550,7 +550,7 @@ def _create_task_manifest_from_cloud_data(
         sorted_media,
         scene_paths=(
             lambda p: not re.search(r'(^|{0})related_images{0}'.format(os.sep), p)
-            # backward compatibility, deprecated in https://github.com/cvat-ai/cvat/pull/9757
+            # backward compatibility, deprecated in https://github.com/VGTHuang/cvat/pull/9757
         )
     )
     sorted_media = [f for f in sorted_media if f in regular_images]

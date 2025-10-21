@@ -313,7 +313,7 @@ class TestTasksBase:
             cloud_storage_id=cloud_storage_id,
             # FIXME: random sorting with frame filter and cloud images (and, optionally, honeypots)
             # doesn't work with static cache
-            # https://github.com/cvat-ai/cvat/issues/9021
+            # https://github.com/VGTHuang/cvat/issues/9021
             use_cache=True,
         )
 

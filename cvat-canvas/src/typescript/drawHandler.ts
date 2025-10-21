@@ -642,7 +642,7 @@ export class DrawHandlerImpl implements DrawHandler {
             const { shapeType, redraw: clientID } = this.drawData;
             const { points, box } = shapeType === 'cuboid' ?
                 this.getFinalCuboidCoordinates(targetPoints) :
-                this.getFinalPolyshapeCoordinates(targetPoints, true);
+                this.getFinalPolyshapeCoordinates(targetPoints, false);
 
             if (this.canceled) {
                 return;
@@ -891,7 +891,7 @@ export class DrawHandlerImpl implements DrawHandler {
             const { shapeType } = this.drawData.initialState;
             const { points, box } = shapeType === 'cuboid' ?
                 this.getFinalCuboidCoordinates(targetPoints) :
-                this.getFinalPolyshapeCoordinates(targetPoints, true);
+                this.getFinalPolyshapeCoordinates(targetPoints, false);
 
             if (checkConstraint(shapeType, points, box)) {
                 this.onDrawDone(

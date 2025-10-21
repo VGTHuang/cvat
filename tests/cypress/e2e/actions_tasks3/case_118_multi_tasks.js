@@ -111,7 +111,7 @@ context('Create multi tasks.', () => {
         });
 
         it('Trying to create a tasks with remote videos', () => {
-            const baseUrl = 'https://github.com/cvat-ai/cvat';
+            const baseUrl = 'https://github.com/VGTHuang/cvat';
             const revision = 'raw/b2a66db76ba8316521bc7de2fbd418008ab3cb5b';
             const folder = 'tests/mounted_file_share';
             cy.contains('[role="tab"]', 'Remote sources').click();
